@@ -72,7 +72,7 @@ public class SparkTest {
     private SparkSession getSparkWithPrune(String s) {
         return SparkSession.builder()
                 .master("local")
-                .appName("pcaas_ng_transformer")
+                .appName("spark-columns-issue")
                 .config("spark.locality", "PROCESS_LOCAL")
                 .config("spark.sql.csv.parser.columnPruning.enabled", s)
                 .config("spark.ui.enabled", "false")
